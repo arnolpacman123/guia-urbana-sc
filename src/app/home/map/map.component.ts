@@ -86,7 +86,7 @@ export class MapComponent implements OnDestroy {
 
   styleMap(): string {
     if (this.isSmallScreen) {
-      return "height: calc(100% - 148.43px); width: 100%";
+      return "height: calc(100% - 145.43px); width: 100%";
     } else {
       return 'height: calc(100% - 139.58px); width: 100%;';
     }
