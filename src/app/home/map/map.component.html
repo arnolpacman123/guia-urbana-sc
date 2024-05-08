@@ -1,0 +1,12 @@
+<div
+  leaflet
+  [leafletOptions]="options"
+  [leafletLayersControl]="layersControl"
+  [style]="styleMap()"
+  (leafletMapReady)="onMapReady($event)"
+></div>
+<leaflet-locate-control
+  [options]="locateOptions"
+  [map]="map"
+  (location$)="_onNewLocation($event)"
+></leaflet-locate-control>
