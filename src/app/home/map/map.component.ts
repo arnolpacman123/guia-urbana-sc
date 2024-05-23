@@ -13,13 +13,15 @@ import { NgxLeafletLocateModule } from "@runette/ngx-leaflet-locate";
     NgxLeafletLocateModule
   ],
   templateUrl: './map.component.html',
-  styleUrl: './map.component.css'
+  styleUrl: './map.component.scss'
 })
 export class MapComponent implements OnDestroy {
   options: MapOptions = {
     layers: [
-      tileLayer('https://google.com/maps/vt?x={x}&y={y}&z={z}', {
-        attribution: 'Google Maps'
+      tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        attribution: 'Google Maps',
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+        maxNativeZoom: 20,
       }),
     ],
     zoom: 13,
@@ -94,5 +96,8 @@ export class MapComponent implements OnDestroy {
 
   _onNewLocation(event: LocationEvent) {
     this.myLocation = event.latlng;
+  }
+
+  onMapMove(event: LeafletEvent) {
   }
 }

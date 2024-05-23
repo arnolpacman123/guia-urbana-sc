@@ -4,6 +4,7 @@
   [leafletLayersControl]="layersControl"
   [style]="styleMap()"
   (leafletMapReady)="onMapReady($event)"
+  (leafletMapMove)="onMapMove($event)"
 ></div>
 <leaflet-locate-control
   [options]="locateOptions"

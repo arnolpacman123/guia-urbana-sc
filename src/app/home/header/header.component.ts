@@ -7,7 +7,7 @@ import { Subscription } from "rxjs";
   standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnDestroy {
   isSmallScreen = false;
